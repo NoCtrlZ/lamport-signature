@@ -1,5 +1,5 @@
 [package]
-name = "lamport-signature"
+name = "lamport-sig"
 version = "0.1.0"
 authors = ["NoCtrlZ <phantomofrotten@gmail.com>"]
 description = "Lamport Signature"
