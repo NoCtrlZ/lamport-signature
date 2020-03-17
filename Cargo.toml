@@ -2,6 +2,7 @@
 name = "lamport-signature"
 version = "0.1.0"
 authors = ["NoCtrlZ <phantomofrotten@gmail.com>"]
+description = "Lamport Signature"
 edition = "2018"
 license = "MIT"
 readme = "README.md"
