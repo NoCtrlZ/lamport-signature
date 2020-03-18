@@ -1,5 +1,6 @@
 extern crate rand;
 extern crate bigint;
+extern crate rustc_hex;
 
 mod key;
 
@@ -7,9 +8,14 @@ mod key;
 mod tests {
     use super::*;
     #[test]
-    fn test_private_key_new() {
-        let key = key::PrivateKey::new();
-        println!("hello");
-        println!("{:?}", key);
+    fn test_lamport_signature() {
+        let plain_text = "secret message";
+        let private_key = key::PrivateKey::new();
+        let signature = private_key.sign(&plain_text);
+        let public_key = private_key.to_public_key();
+        let is_valid = public_key.verify(plain_text, signature);
+        assert_eq!(key::PRIVATE_KEY_LENGT, private_key.pairs.len());
+        assert_eq!(key::PRIVATE_KEY_LENGT, private_key.public_key.pairs.len());
+        assert_eq!(true, is_valid);
     }
 }

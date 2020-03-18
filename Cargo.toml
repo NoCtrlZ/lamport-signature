@@ -1,6 +1,6 @@
 [package]
 name = "lamport-sig"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["NoCtrlZ <phantomofrotten@gmail.com>"]
 description = "Lamport Signature"
 edition = "2018"
@@ -11,3 +11,5 @@ readme = "README.md"
 [dependencies]
 bigint = "4"
 rand = "0.7"
+rust-crypto = "0.2"
+rustc-hex = "1.0"
